@@ -20,20 +20,42 @@
 
   <!-- Merge in these other files as submenus -->
   <Menu>
-    <Name>Preferences</Name>
-    <Directory>Settings.directory</Directory>
+    <Name>Personal</Name>
+    <Directory>Personal.directory</Directory>
     <Include>
       <And>
-        <Category>Settings</Category>
-        <Not>
-          <Or>
-            <Category>System</Category>
-            <Filename>gnomecc.desktop</Filename>
-          </Or>
-        </Not>
+        <Category>X-GNOME-PersonalSettings</Category>
       </And>
     </Include>
   </Menu>
+  <Menu>
+    <Name>Look and Feel</Name>
+    <Directory>LookAndFeel.directory</Directory>
+    <Include>
+      <And>
+        <Category>DesktopSettings</Category>
+      </And>
+    </Include>
+  </Menu>
+  <Menu>
+    <Name>Internet and Network</Name>
+    <Directory>Network.directory</Directory>
+    <Include>
+      <And>
+        <Category>X-GNOME-NetworkSettings</Category>
+      </And>
+    </Include>
+  </Menu>
+  <Menu>
+    <Name>Hardware</Name>
+    <Directory>Hardware.directory</Directory>
+    <Include>
+      <And>
+        <Category>HardwareSettings</Category>
+      </And>
+    </Include>
+  </Menu>
+
 
   <!-- System Settings -->
   <Menu>
@@ -48,8 +70,11 @@
   </Menu>     <!-- End System Settings -->
 
   <Layout>
-    <Menuname>Preferences</Menuname>
-    <Menuname>Administration</Menuname>
+    <Menuname>Personal</Menuname>
+    <Menuname>Look and Feel</Menuname>
+    <Menuname>Internet and Network</Menuname>
+    <Menuname>Hardware</Menuname>
+    <Menuname>System</Menuname>
     <Merge type="menus"/>
     <Merge type="files"/>
   </Layout>
